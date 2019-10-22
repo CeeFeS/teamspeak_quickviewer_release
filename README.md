@@ -20,7 +20,7 @@ Teamspeak Quickviewer is a simple way to host your own Teamspeak Viewer on Linux
 
 - add content in `html/{position}.html`
 
-- start the serice with `sudo bash start.sh`
+- start the service with `sudo bash start.sh`
 
 ## Note
 
