@@ -1,0 +1,151 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/* Grundlayout für SELFHTML-Beispiele */
+
+html {
+
+}
+
+body { margin: 1em auto;
+	max-width: 65em;
+
+background-image: url(https://ts.cf-schulze.de/background-img.jpg);
+}
+
+.all-content-wrapper{
+	display: grid;
+  grid-template-columns: 1fr;
+	background-color: white;
+	border: dashed 7px black;
+  border-radius: 12px;
+}
+
+h1, main, aside, main svg {
+margin: 1em auto;
+	max-width: 40em;
+text-align: center;
+background: #FFFFFF;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	border-color: #d5d5d5;
+}
+
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+font-size: 25px;
+
+}
+
+
+
+h3 {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 22px;
+letter-spacing: 1.6px;
+word-spacing: -5px;
+color: #000000;
+font-weight: 400;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+margin-left: 50px;
+}
+
+h4 {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16px;
+}
+
+header{
+	border-bottom: 6px inset #000000;
+  margin: 10px;
+}
+
+.body_content_before_clientboxes{
+	margin: 20px;
+}
+
+.boxes-wrapper{
+margin: 20px;
+}
+.additional-bodycontent-wrapper{
+	margin: 20px;
+}
+h6 {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+color: #000000;
+}
+
+
+
+footer {
+  position: fixed;
+  padding: 10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+text-align: right;
+font-family: "Courier New", Courier, monospace;
+font-size: 10px;
+letter-spacing: -1.5px;
+word-spacing: 0px;
+color: #000000;
+font-weight: 700;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+
+}
+
+header {
+border-bottom: 6px inset #000000;
+
+}
+
+#box {
+-webkit-box-shadow: 5px 5px 15px 5px #000000;
+box-shadow: 5px 5px 15px 5px #000000;
+border-left: 12px solid #6DFF24;
+background: #FFFFFF;
+margin-right: 50px;
+margin-left: 50px;
+
+font-family: "Courier New", Courier, monospace;
+font-size: 18px;
+letter-spacing: 2px;
+word-spacing: 0px;
+color: #000000;
+font-weight: 700;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+
+#fragebox {
+-webkit-box-shadow: 5px 5px 15px 5px #000000;
+box-shadow: 5px 5px 15px 5px #000000;
+border-left: 6px groove #000000;
+background: #FFFFFF;
+
+border: 3px dotted #631919;
+}
+
+#easteregg {
+font-family: "Trattatello", fantasy, monospace;
+font-size: 20px;
+letter-spacing: 0px;
+word-spacing: 0px;
+color: #FF0000;
+font-weight: 100;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
