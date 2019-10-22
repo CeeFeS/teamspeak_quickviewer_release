@@ -7,9 +7,9 @@ Teamspeak Quickviewer is a simple way to host your own Teamspeak Viewer on Linux
 - Webserver with PHP
 
 ## Installation
- 1. `wget https://github.com/CeeFeS/teamspeak_quickviewer_release/raw/master/releases/release_v1.13_public.zip`
+ 1. `wget https://github.com/CeeFeS/teamspeak_quickviewer_release/raw/master/releases/release_v1.14_public.zip`
 
- 2. `unzip release_v1.13_public.zip`
+ 2. `unzip release_v1.14_public.zip`
 
 
 ## Start
