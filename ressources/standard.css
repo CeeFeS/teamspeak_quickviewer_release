@@ -12,7 +12,31 @@ body { margin: 1em auto;
 
 background-image: url(https://ts.cf-schulze.de/background-img.jpg);
 }
+.nickname-wrapper{
+	font-family: "Courier New", Courier, monospace;
+	font-size: 20px;
 
+}
+
+.profile-wrapper{
+	margin-left: 30px;
+}
+
+
+.description-wrapper{
+	margin-left: 10px;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 13px;
+}
+
+.ip-wrapper{
+	font-family: "Arial";
+	font-size: 10px;
+}
+.channel-wrapper{
+	font-family: "Arial";
+	font-size: 10px;
+}
 .all-content-wrapper{
 	display: grid;
   grid-template-columns: 1fr;
@@ -90,7 +114,6 @@ footer {
   left: 0;
   right: 0;
 text-align: right;
-font-family: "Courier New", Courier, monospace;
 font-size: 10px;
 letter-spacing: -1.5px;
 word-spacing: 0px;
@@ -109,23 +132,16 @@ border-bottom: 6px inset #000000;
 }
 
 #box {
--webkit-box-shadow: 5px 5px 15px 5px #000000;
-box-shadow: 5px 5px 15px 5px #000000;
-border-left: 12px solid #6DFF24;
-background: #FFFFFF;
-margin-right: 50px;
-margin-left: 50px;
-
-font-family: "Courier New", Courier, monospace;
-font-size: 18px;
-letter-spacing: 2px;
-word-spacing: 0px;
-color: #000000;
-font-weight: 700;
-text-decoration: none;
-font-style: normal;
-font-variant: normal;
-text-transform: none;
+	display: grid;
+	    grid-template-columns: 1fr 1fr;
+	    /* -webkit-box-shadow: 5px 5px 5px 5px #000000; */
+	    /* box-shadow: 5px 5px 15px 5px #000000; */
+	    border-left: 12px solid #21ad00;
+	    background: #fff7ea;
+	    margin-right: 50px;
+	    margin-left: 50px;
+	    margin-top: 10px;
+	    box-shadow: 10px 10px 0px -1px rgba(0,0,0,0.11);
 }
 
 #fragebox {

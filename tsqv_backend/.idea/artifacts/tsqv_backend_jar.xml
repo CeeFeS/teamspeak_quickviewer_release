@@ -3,6 +3,8 @@
     <output-path>$PROJECT_DIR$/out/artifacts/tsqv_backend_jar</output-path>
     <root id="archive" name="tsqv_backend.jar">
       <element id="module-output" name="tsqv_backend" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/teamspeak3-api-1.2.0-with-dependencies.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

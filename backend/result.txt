@@ -1,7 +1,0 @@
-TS3
-Welcome to the TeamSpeak 3 ServerQuery interface, type "help" for a list of commands and "help <command>" for information on a specific command.
-error id=0 msg=ok
-error id=0 msg=ok
-clid=122 cid=1 client_database_id=1 client_nickname=serveradmin client_type=1 connection_client_ip=127.0.0.1
-error id=0 msg=ok
-error id=0 msg=ok
