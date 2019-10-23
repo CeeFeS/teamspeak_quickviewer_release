@@ -1,4 +1,4 @@
-#Teamspeak Quickviewer
+# Teamspeak Quickviewer
 
 Teamspeak Quickviewer is a simple way to host your own Teamspeak Viewer on Linux Server. The frontend is running on an Apache Server with PHP and the backend was developed on Java, Bash- Scripts and HTML. Coded in a structured and understandable way, the project is perfect for expanding the possibilities and adapting the functions to your needs.
 
