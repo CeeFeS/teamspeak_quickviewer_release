@@ -6,12 +6,14 @@ public class ClientInformation {
     private String ip;
     private String channel;
     private String beschreibung;
+    private int[] server_groups;
 
-    public ClientInformation(String nickname, String ip, String channel, String beschreibung) {
+    public ClientInformation(String nickname, String ip, String channel, String description, int[] server_groups) {
         this.nickname = nickname;
         this.ip = ip;
         this.channel = channel;
-        this.beschreibung = beschreibung;
+        this.beschreibung = description;
+        this.server_groups = server_groups;
     }
 
 
@@ -46,4 +48,22 @@ public class ClientInformation {
     public void setBeschreibung(String beschreibung) {
         this.beschreibung = beschreibung;
     }
+
+
+    public String getMarked() {
+        String marked = "trusted";
+
+        for (int i = 0; i < server_groups.length; i++) {
+            if (server_groups[i] == 16) {
+                marked = "marked";
+            } else if (server_groups[i] == 8) {
+                marked = "untrusted";
+            }
+
+
+        }
+
+        return marked;
+    }
+
 }

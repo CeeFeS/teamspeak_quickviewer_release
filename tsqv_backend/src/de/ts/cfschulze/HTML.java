@@ -180,9 +180,17 @@ public class HTML {
         for (ClientInformation client : clients) {
 
             if (!(client.getNickname().equals("TSQV_Bot"))) {
-                String result_einzeln = "<div id=\"box\"><div class=\"profile-wrapper\"><div class=\"nickname-wrapper\">" + client.getNickname() + "</div><div class=\"channel-wrapper\">Channel:" + client.getChannel() + "</div><div class=\"ip-wrapper\">IP:" + client.getIp() + "</div></div><div class=\"description-wrapper\">" + client.getBeschreibung() + "</div></div><br>";
-                sb.append(result_einzeln);
 
+                if (client.getMarked().equals("marked")) {
+                    String result_einzeln = "<div id=\"box\"><div class=\"profile-wrapper\"><div class=\"nickname-wrapper\">" + client.getNickname() + "<div class=\"marked\">" + "markiert" + "</div></div><div class=\"channel-wrapper\">Channel:" + client.getChannel() + "</div><div class=\"ip-wrapper\">IP:" + client.getIp() + "</div></div><div class=\"description-wrapper\">" + client.getBeschreibung() + "</div></div><br>";
+                    sb.append(result_einzeln);
+                } else if (client.getMarked().equals("untrusted")) {
+                    String result_einzeln = "<div id=\"box\"><div class=\"profile-wrapper\"><div class=\"nickname-wrapper\">" + client.getNickname() + "<div class=\"untrusted\">" + "untrusted" + "</div></div><div class=\"channel-wrapper\">Channel:" + client.getChannel() + "</div><div class=\"ip-wrapper\">IP:" + client.getIp() + "</div></div><div class=\"description-wrapper\">" + client.getBeschreibung() + "</div></div><br>";
+                    sb.append(result_einzeln);
+                } else if (client.getMarked().equals("trusted")) {
+                    String result_einzeln = "<div id=\"box\"><div class=\"profile-wrapper\"><div class=\"nickname-wrapper\">" + client.getNickname() + "<div class=\"trusted\">" + "trusted" + "</div></div><div class=\"channel-wrapper\">Channel:" + client.getChannel() + "</div><div class=\"ip-wrapper\">IP:" + client.getIp() + "</div></div><div class=\"description-wrapper\">" + client.getBeschreibung() + "</div></div><br>";
+                    sb.append(result_einzeln);
+                }
             }
         }
 
@@ -225,7 +233,7 @@ public class HTML {
             String beschreibung = api.getClientInfo(c.getId()).getDescription();
 
             // Write the client and channel name into the console
-            ClientInformation client = new ClientInformation(c.getNickname(), c.getIp(), channel.getName(), beschreibung);
+            ClientInformation client = new ClientInformation(c.getNickname(), c.getIp(), channel.getName(), beschreibung, c.getServerGroups());
             clientInformation.add(client);
         }
 
