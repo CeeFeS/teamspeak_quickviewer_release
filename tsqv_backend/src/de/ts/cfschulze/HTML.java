@@ -25,10 +25,7 @@ public class HTML {
 
     private String path_index_out;
 
-    private String host;
-    private int port;
-    private String username;
-    private String password;
+    private TS3Api api;
 
 
     public HTML(String path_index_out, String path_stylsheet, String path_head, String path_header, String path_body_content_before_client, String path_additional_body_content) {
@@ -168,7 +165,7 @@ public class HTML {
     private String create_index_php(String head, String header, String body_content_before_clientboxes,
                                     String additional_body_content) {
 
-        ArrayList<ClientInformation> clients = getData(getHost(), getPort());
+        ArrayList<ClientInformation> clients = getData();
 
 
         StringBuilder sb = new StringBuilder();
@@ -201,22 +198,7 @@ public class HTML {
     }
 
 
-    private ArrayList<ClientInformation> getData(String host, int port) {
-
-
-        final TS3Config config = new TS3Config();
-        config.setHost(host);
-        config.setQueryPort(port);
-        config.setEnableCommunicationsLogging(true);
-
-
-        final TS3Query query = new TS3Query(config);
-        query.connect();
-
-        final TS3Api api = query.getApi();
-        api.login(getUsername(), getPassword());
-        api.selectVirtualServerById(1);
-        api.setNickname("TSQV_Bot");
+    private ArrayList<ClientInformation> getData() {
 
         // Get all channels and map their channel IDs to them
         List<Channel> channels = api.getChannels();
@@ -238,43 +220,12 @@ public class HTML {
         }
 
 
-        // We're done, disconnect
-        query.exit();
-
         return clientInformation;
     }
 
-
-    public String getHost() {
-        return host;
-    }
-
-    public void setHost(String host) {
-        this.host = host;
-    }
-
-    public int getPort() {
-        return port;
-    }
-
-    public void setPort(int port) {
-        this.port = port;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    
+    public void setApi(TS3Api api) {
+        this.api = api;
     }
 }
 

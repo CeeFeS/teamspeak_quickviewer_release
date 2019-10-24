@@ -10,6 +10,8 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Properties;
 
 
@@ -23,26 +25,24 @@ public class Main {
     private static String username = "";
     private static String password = "";
 
+    public static final int INDEXPHP_OUT = 0, PATH_STYLESHEET = 1, PATH_HEAD = 2, PATH_HEADER = 3, PATH_BODY_BEFORE_CLIENT = 4, PATH_ADDITIONAL_BODY_CONTENT = 5;
+
 
     public static void main(String[] args) {
-        final String index_out = args[0];
-        final String path_stylesheet = args[1];
-        final String path_head = args[2] + "/head.html";
-        final String path_header = args[2] + "/header.html";
-        final String path_body_content_before_client = args[2] + "/body_content_before_clientboxes.html";
-        final String path_additional_body_content = args[2] + "/additional_body_content.html";
+        HashMap<Integer, String> start_data = new HashMap<>();
+
+
+        start_data.put(INDEXPHP_OUT, args[0]);
+        start_data.put(PATH_STYLESHEET, args[1]);
+        start_data.put(PATH_HEAD, args[2] + "/head.html");
+        start_data.put(PATH_HEADER, args[2] + "/header.html");
+        start_data.put(PATH_BODY_BEFORE_CLIENT, args[2] + "/body_content_before_clientboxes.html");
+        start_data.put(PATH_ADDITIONAL_BODY_CONTENT, args[2] + "/additional_body_content.html");
+
         path_settings = args[3];
 
-        HTML html = new HTML(index_out, path_stylesheet, path_head, path_header, path_body_content_before_client, path_additional_body_content);
-        html.setHost(HOST);
-        html.setPort(PORT);
-
         read_properties();
-
-        html.setUsername(username);
-        html.setPassword(password);
-
-        html.run();
+        ApiConnection apiConnection = new ApiConnection(HOST, PORT, username, password, start_data);
 
 
     }
