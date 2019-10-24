@@ -23,6 +23,7 @@ background-image: url(https://ts.cf-schulze.de/background-img.jpg);
 .trusted{
 
 	width: 60px;
+	height: 12px;
 	font-family: "Arial";
     font-weight: bold;
     border-radius: 10px;
@@ -33,6 +34,7 @@ background-image: url(https://ts.cf-schulze.de/background-img.jpg);
 }
 .untrusted{
 	width: 60px;
+	height: 12px;
 	font-family: "Arial";
 	    font-weight: bold;
 	    border-radius: 10px;
@@ -43,6 +45,7 @@ background-image: url(https://ts.cf-schulze.de/background-img.jpg);
 }
 .marked{
 	width: 60px;
+	height: 12px;
 	font-family: "Arial";
 	    font-weight: bold;
 	    /* border: solid; */
